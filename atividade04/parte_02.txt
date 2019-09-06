@@ -1,0 +1,2 @@
+cut -f 7 -d : /etc/passwd
+cat /home/compartilhado/despesas.txt | cut -f 2 -d '|' | cut -f 3 -d ' ' | sed -n '3,6 p' | tr '\n' '+' | sed 's/+$/\n/' | sed 'y/,/./' | bc

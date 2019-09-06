@@ -1,0 +1,4 @@
+grep -E ' .$' expressoesregulares.txt
+grep -E '[.][[:alpha:]]' expressoesregulares.txt
+grep -E '[.][ ]?[[:lower:]]' expressoesregulares.txt
+grep -E '([^. ][^.])$' expressoesregulares.txt
