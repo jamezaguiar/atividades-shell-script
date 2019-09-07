@@ -1,0 +1,17 @@
+#!/bin/bash
+PRIMEIRO=$1
+SEGUNDO=$2
+TERCEIRO=$3
+MAIOR=$PRIMEIRO
+
+if [ $SEGUNDO -gt $PRIMEIRO ] && [ $SEGUNDO -gt $TERCEIRO ]
+then
+	MAIOR=$SEGUNDO
+fi
+
+if [ $TERCEIRO -gt $PRIMEIRO ] && [ $TERCEIRO -gt $SEGUNDO ]
+then
+	MAIOR=$TERCEIRO
+fi
+
+echo $MAIOR
