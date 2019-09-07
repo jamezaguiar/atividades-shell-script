@@ -2,7 +2,7 @@
 notas=$*
 soma=`echo $* | tr ' ' '+' | bc`
 media=`echo $soma/$# | bc`
-show=`echo $notas | tr ' ' '\n' | sort`
+show=`echo $notas | tr ' ' '\n' | sort -n`
 menor=`echo $show | tr ' ' '\n' | head -n 1`
 maior=`echo $show | tr ' ' '\n' | tail -n 1`
 echo O menor valor digitado foi $menor
