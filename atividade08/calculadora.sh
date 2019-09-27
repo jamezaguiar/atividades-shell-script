@@ -40,13 +40,13 @@ do
           if [[ $VISOR =~ [0-9]+[[:blank:]][\*\/\+\-] ]]
 	  then
 	     # faça a operação
-	     VISOR="$VISOR $TECLA = `expr $VISOR $TECLA`"
+	     VISOR="$VISOR $TECLA = `echo "scale=2;$VISOR" "$TECLA" | bc`"
 	  fi
        fi
    # se você não digitou um número
    else
        # mas digitou um operador
-       if [[ $TECLA =~ [*/\+\-] ]]
+       if [[ $TECLA =~ [\*\/\+\-] ]]
        then
           # atualize a tela para mostrar o primeiro número e o operador
           VISOR="$VISOR $TECLA"
@@ -54,13 +54,3 @@ do
    fi
 
 done
-
-
-
-
-
-
-
-
-
-
