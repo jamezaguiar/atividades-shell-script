@@ -15,14 +15,12 @@ do
 	if [ ! -z `cat adicionados.txt | head -n 1` ]
 	then
 		echo $SHOW Alteração! $ANTES'->'$AGORA'.' Adicionados: `cat adicionados.txt | tr '\n' ', ' | sed 's/,/, /g' | sed 's/, $/\n/'` >> dirSensors.log
-		cat dirSensors.log | tail -n 1
 		cat newfiles.txt > oldfiles.txt
 	fi
 
 	if [ ! -z `cat removidos.txt | head -n 1` ]
 	then
 		echo $SHOW Alteração! $ANTES'->'$AGORA'.' Removidos: `cat removidos.txt | tr '\n' ', ' | sed 's/,/, /g' | sed 's/, $/\n/'` >> dirSensors.log
-		cat dirSensors.log | tail -n 1
 		cat newfiles.txt > oldfiles.txt
 	fi
 
