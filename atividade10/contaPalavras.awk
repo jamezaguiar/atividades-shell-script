@@ -8,7 +8,7 @@ BEGIN {print "Relatório de palavras."}
 }
 END {
   for (z in vetor) {
-    printf "%s:\t%d\n", z , vetor[z] | "sort -nr -k2"
+    printf "%s:\t%d\n", z , vetor[z]
   };
   printf "Total de Palavras analisadas: %d\n" , totalPalavras
 }
